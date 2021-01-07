@@ -1,2 +1,2 @@
 # cosas-python
-cosas básicas de python
+cosas muy básicas de python
