@@ -10,14 +10,13 @@ def mult(rut):
     z=int(2)
     colaRut=deque()
     print("Entramos a la funcion") 
-    print(f"Vamos a calcula el digito verificador para el rut {rut}")
+    print(f"Vamos a calcular el digito verificador para el rut {rut}")
 
     colaRut=rut
     
     print(f"{colaRut}")    
     for x in reversed(colaRut):
-       # print(f"Pasa por for de la colaRut")
-        
+       
         if z <=7:
          y=int(x)
          m=y*z
