@@ -1,5 +1,7 @@
 #DIGITO VERIFICADOR PARA RUT CL
 #SE PUEDE USAR PARA CREAR RUT
+#no es necesario mostrar los resultados de los calculos
+#pero los agregué solo para conocimiento general 
 
 from collections import deque
 
@@ -53,8 +55,10 @@ def mult(rut):
 
        
 #Pedimos el rut 
-v_rut = input("Ingresa tu rut sin digito verificador ")
-
+print("########################################################")
+print("### Calculo digito verificador para los rut de CHILE ###")
+print("########################################################")
+v_rut = input("Ingresa un rut sin digito verificador ")
 mult(v_rut)
 
 
