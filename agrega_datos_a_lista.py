@@ -4,6 +4,6 @@ P={'nombre':'Aragorn','clase':'guerrero','raza':'Dunuban del norte'}
 personajes.append(P)
 P={'nombre':'Gandalf','clase':'mago','raza':'Istar'}
 personajes.append(P)
-P={'nombre':'Legolas','clase':'arquiero','raza':'Elfo'}
+P={'nombre':'Legolas','clase':'arquiero','raza':'Elf'}
 personajes.append(P)
 print(personajes)
