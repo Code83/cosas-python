@@ -43,7 +43,8 @@ def mult(rut):
         print(f"{p} - {v_dig2} = {v_dig3}")
 
         v_dig4 = 11 - v_dig3
-        print(f" El digito V es: = {v_dig4}")
+        if v_dig4 <10:
+         print(f" El digito verificador es: = {v_dig4}")
 
         if v_dig4 == 11:
             print("El digito verificador es = 0")
