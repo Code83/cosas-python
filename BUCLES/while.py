@@ -1,4 +1,4 @@
-n = int(input("Ingresa la cantidad de numero a procesar"))
+n = int(input("Ingresa la cantidad de numero a procesar: "))
 s = 0
 i = 1
 
