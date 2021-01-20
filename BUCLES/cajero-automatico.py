@@ -12,22 +12,22 @@ while True:
 
   opcion = int(input("Ingresa una opcion: "))  
   if opcion in range(0,3):
-      if opcion == 1:
+    if opcion == 1:
           print("Su saldo disponible es :$", saldo)
-      elif opcion == 2:
+    elif opcion == 2:
           monto = int(input("Ingreso monto a retirar: "))
           if monto > saldo:
-              print("Saldo insuficiente")
-          else:
+            print("Saldo insuficiente")
+    else:
             saldo = saldo - monto
             print("Operacion exitosa")      
             print("Su nuevo saldo es:", saldo)
-      elif opcion == 3:
-          monto = int(input("Ingrese el monto a depositar:"))  
-          saldo = monto + saldo
-          print("Su saldo actual es:", saldo)
-      else:
-          print("Adios")    
-          break
-  else:
-        print("La opcion no es valida, intente nuevamente")    
+    elif opcion == 3:
+        monto = int(input("Ingrese el monto a depositar:"))  
+        saldo = monto + saldo
+        print("Su saldo actual es:", saldo)
+    else:
+        print("Adios")    
+        break
+else:
+    print("La opcion no es valida, intente nuevamente")    
