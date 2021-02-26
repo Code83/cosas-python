@@ -12,7 +12,7 @@ def mult(rut):
     z=int(2)
     colaRut=deque()
     print("Entramos a la funcion") 
-    print(f"Vamos a calcular el digito verificador para el rut {rut}")
+    print(f"Vamos a calcular el digito verificador para el rut: {rut}")
 
     colaRut=rut
     
@@ -58,7 +58,7 @@ def mult(rut):
 print("########################################################")
 print("### Calculo digito verificador para los rut de CHILE ###")
 print("########################################################")
-v_rut = input("Ingresa un rut sin digito verificador ")
+v_rut = input("Ingresa un rut SIN digito verificador: ")
 mult(v_rut)
 
 
