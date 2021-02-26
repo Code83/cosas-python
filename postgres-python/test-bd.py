@@ -10,7 +10,9 @@ sql2="select * from usuarios where rut = '%s'"
 #insetruccion para borrar por rut
 delete = "delete from usuarios where rut =%s"
 #instruccion para crear los vehiculos
-sql3="insert into autos (marca,modelo,disponible,patente) values (%s,%s,%s,%s)"
+sql3="insert into autos (marca,modelo,disponible, patente) values (%s,%s,%s,%s)"
+#actualizamos datos de autos
+sql4="update autos set kms = %s where patente =%s"
 
 #Definimos funcion para insertar datos en BD
 #Se reciben los datos a insertar en la variable datos
@@ -19,9 +21,8 @@ def inserta(datos):
     if rut == '':
         print("rut obligatorio, no se inserta registro")
     else:
+        
         cursor1.execute(sql,datos)
-
- #cursor1.execute(delete,valida) línea para permitir borrar datos por rut
 
         conexion.commit()
         conexion.close()
@@ -35,8 +36,8 @@ def eliminar(valida):
     conexion.close()
     print("Usuario eliminado")
 
-def crea_auto(datos_auto):
-    cursor1.execute(sql3.datos_auto)   
+def creaauto(datosauto):
+    cursor1.execute(sql3,datosauto)   
     print("Ingreso OK")
     conexion.commit()
     conexion.close()
@@ -64,13 +65,13 @@ elif menu == 2:
 elif menu == 3:
     marca = input("Ingresa la marca del vehiculo: ")
     modelo = input("Ingresa el modelo: ")
-    kms = int(input("KMS recorridos: "))
-    anofab = int(input("Año de fabricacion: "))
-    disponible = input("Disponible? SI/NO:")
+    #kms = int(input("KMS recorridos: "))
+    #anofab = int(input("Año de fabricacion: "))
+    disponible = input("Disponible? SI/NO: ")
     patente = input("Patente: ")
     
-    datos_auto = (marca,modelo,disponible,patente)
-    crea_auto(datos_auto)
+    datosauto = (marca,modelo,disponible,patente) 
+    creaauto(datosauto)
 else:
     print("ADIOS")
     #break
