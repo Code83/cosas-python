@@ -22,9 +22,10 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route('/creaUsuario', strict_slashes=False)
+#@app.route('/creaUsuario', strict_slashes=False)
+@app.route('/form',strict_slashes=False)
 def hola():
-    conexion = psycopg2.connect(database="postgres",user="postgres",password="admin")
+    conexion = psycopg2.connect(database="postgres",user="postgres",password="ADMIN")
     cursor1 = conexion.cursor()
     sql="insert into usuarios (nombre, apellidopat, apellidomat, rut) values ('Hola', 'a', 'todos', 'NNNNN')"
     cursor1.execute(sql)
