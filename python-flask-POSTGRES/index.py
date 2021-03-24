@@ -22,6 +22,10 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/formulario", methods=["GET","POST"])
+def mostrar_formulario_registro():
+    return render_template("form.html")    
+
 #@app.route('/creaUsuario', strict_slashes=False)
 @app.route('/form',strict_slashes=False)
 def hola():
@@ -32,7 +36,7 @@ def hola():
     conexion.commit()
     conexion.close()
 
-    return render_template("creaUsuario.html")
+    return render_template("form.html")
 # Make sure this we are executing this file
 if __name__ == '__main__':
     app.run(debug=True)
